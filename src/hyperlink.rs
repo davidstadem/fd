@@ -61,6 +61,11 @@ const fn host() -> &'static str {
     ""
 }
 
+#[cfg(windows)]
+const fn host() -> &'static str {
+    "/"
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
