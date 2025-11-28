@@ -56,14 +56,14 @@ fn host() -> &'static str {
         .as_ref()
 }
 
-#[cfg(not(unix))]
-const fn host() -> &'static str {
-    ""
-}
-
 #[cfg(windows)]
 const fn host() -> &'static str {
     "/"
+}
+
+#[cfg(not(any(unix, windows)))]
+const fn host() -> &'static str {
+    ""
 }
 
 #[cfg(test)]
