@@ -13,6 +13,8 @@
     - #1667
     - #1813
 
+- `--hyperlink` option is improved on Windows (hyperlinks will now like `file:///C:/test/test.txt` rather than previous `file://C:/test/test.txt`). Fixes #1843.
+
 ## Changes
 
 - Minimum required rust version has been increased to 1.90.0. Notably, this means dropping fully support for intel Mac and Windows 7.
